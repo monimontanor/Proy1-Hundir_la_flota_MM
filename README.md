@@ -34,4 +34,4 @@ El objetivo es simular la lógica básica del juego mediante la creación de un 
 
 ## ▶️ Ejecución del proyecto
 
-Ejecutar el archivo principal desde terminal:
+Ejecutar el archivo principal desde terminal
