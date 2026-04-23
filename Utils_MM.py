@@ -9,7 +9,7 @@ def crea_tablero (): #No recibe nada
     tablero = np.full ((10,10), "-")
     return tablero
 
-#Colocar los barcos manualmente 
+#Colocar los barcos en el tablero
 
 def colocar_barcos (lista_barcos, tablero):
     for i in lista_barcos:
@@ -26,6 +26,7 @@ def ask_coord():
     fila = int(input("Introduce la coordenada de la fila (OJO: entre el 0 y el 9): ")) #Para convertirla en int
     columna = int(input("Introduce la coordenada de la columna (OJO: entre el 0 y el 9): ")) #Para convertirla en int
     return fila, columna
+
 
     #Disparar 
 
