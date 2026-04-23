@@ -43,3 +43,4 @@ print(f,c)
 
 disparo_jugador = disparar(f,c, tablero_jugador)
 print(disparo_jugador)
+print("Hola")
