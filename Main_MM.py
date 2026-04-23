@@ -2,7 +2,9 @@
 
 import numpy as np
 
-from Utils_MM import crea_tablero, colocar_barcos, ask_coord, disparar
+import random
+
+from Utils_MM import crea_tablero, colocar_barcos, ask_coord, disparar, crear_barco
 
 
 # ------ Creación de los Tableros; los inciiales y los de disparo -----------
@@ -17,7 +19,7 @@ tablero_riv_pum = crea_tablero() #Para cuando dispare
 # --------Creación de listas para usar en colocar barcos------
 
 lista_barcos_jugador = [[(0,1),(1,1)], [(2,3), (2,4),(2,5)]]
-lista_barcos_rival = [[(9,1),(9,2)], [(9,5), (9,6),(9,7)]]
+lista_barcos_rival = [[(9,1),(9,2)], [(9,5),(9,6),(9,7), (9,8)]]
 
 # ---- Defino los diferentes tableros--------------------------
 
@@ -34,13 +36,21 @@ print(tablero_rival)
 
 # -------- Tengo que solicitar las coordenadas -------
 
-print("--------------- VAMOS CON LAS COORDENADAS!-----------------")
+print("--------------- VAMOS CON LAS COORDENADAS-----------------")
 
-f, c = ask_coord()
-print(f,c)
- 
-#------- AHORA SI PUEDO DISPARAR ------------------
+f,c = ask_coord()
 
-disparo_jugador = disparar(f,c, tablero_jugador)
-print(disparo_jugador)
-print("Hola")
+ #------- AHORA SI PUEDO DISPARAR --------------------------------
+#--------TURNO DEL RIVAL ------------
+tablero_rival = disparar(f,c, tablero_rival)
+print(tablero_rival)
+
+print("--------------- COORDENADAS DEL BARCO ALEATORIO-----------------")
+
+# --------- CREAR BARCO ------------------------------------------
+
+barco = crear_barco(4)
+print(barco)
+
+
+
